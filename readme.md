@@ -30,7 +30,9 @@ The following environment variables should be set before starting the server.
 
 `CANCEL_URL` - *Required*. The URL that Stripe will redirect the user to after a user cancels a purchase without completing it. If you don't have a website, you could use a URL scheme to redirect back to your mobile app.
 
-### Using the Sample
+## Using the Sample
+
+**Please ensure you have connected your Stripe account to your RevenueCat account before making test purchases.**
 
 ---
 
@@ -62,7 +64,8 @@ To redirect your users to a checkout, you create a `purchase` link, with the fol
 
 Parameters:
 
-`appUserID` - The RevenueCat app user ID to which this purchase should be applied.
+- `appUserID` - The RevenueCat app user ID to which this purchase should be applied.
 
-`stripePriceID` - The Price ID for the purchase. When you create a subscription with Stripe, you create the 'Product' (for example, 'Pro Mode'), then a 'Price' (for example, $15/monthly). This parameter should be the price ID. Looks something like: `price_1GyCuXCc12BVHqV1Qx5qhFXW`
+- `stripePriceID` - The Price ID for the purchase. When you create a subscription with Stripe, you create the 'Product' (for example, 'Pro Mode'), then a 'Price' (for example, $15/monthly). This parameter should be the price ID. Looks something like: `price_1GyCuXCc12BVHqV1Qx5qhFXW`
 
+After the purchase is completed, Stripe will send a webhook to our server with the data from the purchase. The server will then forward it to RevenueCat and pair it with the user ID who made the purchase.
