@@ -32,17 +32,17 @@ The following environment variables should be set before starting the server.
 
 ## Using the Sample
 
+---
+
 **Please ensure you have [connected your Stripe account](https://docs.revenuecat.com/docs/stripe#1-connect-with-stripe) to your RevenueCat account before making test purchases.**
 
 ---
 
-#### Creating a Product in Stripe
+### Creating a Product in Stripe
 
 Follow the instructions in our [docs](https://docs.revenuecat.com/docs/stripe-products) to create subscription products in Stripe.
 
----
-
-#### Setting Up Webhooks
+### Setting Up Webhooks
 
 You'll need to create a new webhook in Stripe to forward purchase data to your instance and subsequently to RevenueCat.
 
@@ -54,9 +54,8 @@ The URL for your webhook should be the following:
 
 `http://(herokuID).herokuapp.com/webhooks/stripe`
 
----
 
-#### Purchasing
+### Purchasing
 
 To redirect your users to a checkout, you create a `purchase` link, with the following format:
 
