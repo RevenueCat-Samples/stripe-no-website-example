@@ -18,17 +18,17 @@ Note: If you don't use Heroku, you'll need to swap out the herokuapp.com server 
 
 The following environment variables should be set before starting the server.
 
-`RC_API_KEY` - *Required*. API key for your RevenueCat app.
+- `RC_API_KEY` - *Required*. API key for your RevenueCat app.
 
-`STRIPE_KEY` - *Required*. Production Stripe API key.
+- `STRIPE_KEY` - *Required*. Production Stripe API key.
 
-`STRIPE_KEY_TEST` - *Required*. Test Stripe API key.
+- `STRIPE_KEY_TEST` - *Required*. Test Stripe API key.
 
-`TEST_MODE` - *Required*. Should be `true` for production mode. Set to `false` if you want use Stripe in test mode.
+- `TEST_MODE` - *Required*. Should be `true` for production mode. Set to `false` if you want use Stripe in test mode.
 
-`SUCCESS_URL` - *Required*. The URL that Stripe will redirect the user to after a successful purchase. If you don't have a website, you could use a URL scheme to redirect back to your mobile app.
+- `SUCCESS_URL` - *Required*. The URL that Stripe will redirect the user to after a successful purchase. If you don't have a website, you could use a URL scheme to redirect back to your mobile app.
 
-`CANCEL_URL` - *Required*. The URL that Stripe will redirect the user to after a user cancels a purchase without completing it. If you don't have a website, you could use a URL scheme to redirect back to your mobile app.
+- `CANCEL_URL` - *Required*. The URL that Stripe will redirect the user to after a user cancels a purchase without completing it. If you don't have a website, you could use a URL scheme to redirect back to your mobile app.
 
 ## Using the Sample
 
@@ -48,7 +48,7 @@ You'll need to create a new webhook in Stripe to forward purchase data to your i
 
 [Add a new webhook](https://dashboard.stripe.com/test/webhooks) in Stripe for the event types:
 
-`checkout.session.completed`
+- `checkout.session.completed`
 
 The URL for your webhook should be the following:
 
