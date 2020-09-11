@@ -1,0 +1,34 @@
+div
+    h2(id="title") Redirecting...
+    p(id="message")
+        
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+script(src="https://js.stripe.com/v3")
+script(type="text/javascript").
+
+    function setError(error) {
+        $('#title').text("Error")
+        $('#message').text(error);
+    }
+
+    $(document).ready(function() {
+        try {
+            var stripe = Stripe("#{key}");
+            stripe.redirectToCheckout({
+                    lineItems: [{
+                            price: '#{product_id}',
+                            quantity: 1,
+                        }],
+                    mode: 'subscription',
+                    successUrl: '#{success_url}',
+                    cancelUrl: '#{cancel_url}',
+                    clientReferenceId: "#{user_id}"
+                }).then(function (result) {
+                    setError(result.error);
+                }).catch(function (error) {
+                    setError(error);
+                });
+        } catch (err) {
+            setError(err);
+        }
+    });
