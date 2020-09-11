@@ -34,8 +34,6 @@ The following environment variables should be set before starting the server.
 
 ⚠️ **Please make sure you have [connected your Stripe account](https://docs.revenuecat.com/docs/stripe#1-connect-with-stripe) to your RevenueCat account before making test purchases.**
 
----
-
 ### Creating a Product in Stripe
 
 Follow the instructions in our [docs](https://docs.revenuecat.com/docs/stripe-products) to create subscription products in Stripe.
