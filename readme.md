@@ -32,9 +32,13 @@ The following environment variables should be set before starting the server.
 
 ### Using the Sample
 
+---
+
 #### Creating a Product in Stripe
 
 Follow the instructions in our [docs](https://docs.revenuecat.com/docs/stripe-products) to create subscription products in Stripe.
+
+---
 
 #### Setting Up Webhooks
 
@@ -48,6 +52,7 @@ The URL for your webhook should be the following:
 
 `http://(herokuID).herokuapp.com/webhooks/stripe`
 
+---
 
 #### Purchasing
 
