@@ -1,4 +1,8 @@
-This sample assumes some previous knowledge about the RevenueCat platform. If you're looking for official [iOS](https://github.com/RevenueCat/purchases-ios), [Android](https://github.com/RevenueCat/purchases-android), [Flutter](https://github.com/RevenueCat/purchases-flutter), and other SDK's + sample apps for RevenueCat, head over to the [RevenueCat](https://github.com/RevenueCat) GitHub page.
+### Note
+
+This example assumes some previous knowledge about the RevenueCat platform. 
+
+If you're looking for official [iOS](https://github.com/RevenueCat/purchases-ios), [Android](https://github.com/RevenueCat/purchases-android), [Flutter](https://github.com/RevenueCat/purchases-flutter), and other SDK's + sample apps for RevenueCat, head over to the [RevenueCat](https://github.com/RevenueCat) GitHub page.
 
 # Stripe + RevenueCat No Website Example
 
