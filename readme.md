@@ -1,3 +1,5 @@
+This sample assumes some previous knowledge about the RevenueCat platform. If you're looking for official [iOS](https://github.com/RevenueCat/purchases-ios), [Android](https://github.com/RevenueCat/purchases-android), [Flutter](https://github.com/RevenueCat/purchases-flutter), and other SDK's + sample apps for RevenueCat, head over to the [RevenueCat](https://github.com/RevenueCat) GitHub page.
+
 # Stripe + RevenueCat No Website Example
 
 RevenueCat supports web payments through Stripe. This allows you to let users subscribe on your own website, and automatically unlock access to the same subscription content through the Purchases SDK.
@@ -9,8 +11,6 @@ If you don't have or don't want a full website, it can be unclear on how to proc
 The easiest way to use this project is by deploying to Heroku instantly with the button below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/RevenueCat-Samples/stripe-no-website-example)
-
-<!-- Heroku Button -->
 
 You can run the project on any server that supports Node.JS 14.x with minimal effort. 
 
