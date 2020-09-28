@@ -69,7 +69,7 @@ Parameters:
 
 - `:stripePriceID` - The Price ID for the purchase. When you create a subscription with Stripe, you create the 'Product' (for example, 'Pro Mode'), then a 'Price' (for example, $15/monthly). This parameter should be the price ID. Looks something like: `price_1GyCuXCc12BVHqV1Qx5qhFXW`
 
-After the purchase is completed, Stripe will send a webhook to our server with the data from the purchase. The server will then forward it to RevenueCat and pair it with the user ID who made the purchase.
+After the purchase is completed, Stripe will send a webhook to this server with the data from the purchase. The server will then forward it to RevenueCat and pair it with the user ID who made the purchase.
 
 ## Post-purchase
 
@@ -81,5 +81,5 @@ To find a user's purchase in the Stripe dashboard, i.e. for support purposes, yo
 
 Any user can enter any email during checkout, so you'll want to be sure you've got the right invoice in the Stripe dashboard before granting any refunds.
 
-Additionally, you could find the time of purchase from the RevenueCat dashboard and search Stripe for transactions that occurred at that time.
+Additionally, you could find the time of purchase from the RevenueCat dashboard and search Stripe for transactions that occurred at that time. This is not ideal and won't scale well, but it's possible for low volume apps.
 
