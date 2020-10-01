@@ -73,11 +73,11 @@ app.post('/webhooks/stripe', async function (req, res, next) {
     // - Post receipt data to RevenueCat
     axios.post('/receipts', {
       app_user_id: userId,
-      fetch_token: token
+      fetch_token: token,
+      attributes: { "stripe_customer_id": { value: purchaseObject.customer } }
     })
       .then(function (response) {
         // TODO: ensure a successful response from RevenueCat, retry if necessary
-
       })
       .catch(function (error) {
         // TODO: error- retry if necessary

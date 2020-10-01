@@ -71,15 +71,14 @@ Parameters:
 
 After the purchase is completed, Stripe will send a webhook to this server with the data from the purchase. The server will then forward it to RevenueCat and pair it with the user ID who made the purchase.
 
-## Post-purchase
+## Limitations
 
 ### Finding users from the dashboard
 
-A limitation with this example is that each transaction will be logged as a separate customer with no apparent connection between purchases in the RevenueCat dashboard and customers in the Stripe dashboard. 
+A limitation with this example is that each transaction will be logged as a separate customer with no apparent connection between purchases in the RevenueCat dashboard and customers in the Stripe dashboard.
 
-To find a user's purchase in the Stripe dashboard, i.e. for support purposes, you'll need the user to send you the email they used for the purchase or the invoice number they received in their email after the purchase was complete. 
+To pair customers from the RevenueCat dashboard to the Stripe dashboard, this example sets a subscriber attribute for the RevenueCat subscriber called `stripe_customer_id` that is searchable from Stripe's dashboard. Since each purchase is logged as a separate customer, this value is only the customer for the most recent purchase associated with that user ID.
 
-Any user can enter any email during checkout, so you'll want to be sure you've got the right invoice in the Stripe dashboard before granting any refunds.
+### Retry Logic
 
-Additionally, you could find the time of purchase from the RevenueCat dashboard and search Stripe for transactions that occurred at that time. This is not ideal and won't scale well, but it's possible for low volume apps.
-
+This example does not attempt to retry sending purchases to RevenueCat if the initial `POST` fails.
