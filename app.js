@@ -42,6 +42,14 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
+// --- Landing Page
+app.get('/', function (req, res, next) {
+  res.render('landing', { test_mode: TEST_MODE });
+});
+// -------------------
+
+
+
 // --- Endpoints
 app.get('/purchase/:userId/:productId', async function (req, res, next) {
 
