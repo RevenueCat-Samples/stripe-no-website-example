@@ -12,13 +12,13 @@
             "description": "Your RevenueCat app API key. Required."
         },
         "STRIPE_KEY": {
-            "description": "Stripe's API key, can be test key or production key. Required."
+            "description": "Stripe's API key. Required."
         },
         "STRIPE_KEY_TEST": {
-            "description": "Stripe's Test API key, can be test key or production key. Required."
+            "description": "Stripe's Test API key. Required."
         },
         "TEST_MODE": {
-            "description": "Whether or not the test key should be used. Required.",
+            "description": "Whether or not the test key should be used, should be 'true' or 'false'. Required.",
             "value": "true"
         },
         "SUCCESS_URL": {
