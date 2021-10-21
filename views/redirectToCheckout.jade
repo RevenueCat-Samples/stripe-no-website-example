@@ -20,7 +20,7 @@ script(type="text/javascript").
                     quantity: 1,
             }],
                 mode: 'subscription',
-                successUrl: '#{success_url}',
+                successUrl: '#{success_url}' + '/?userID=' + '#{user_id}' + '&priceID=' + '#{product_id}',
                 cancelUrl: '#{cancel_url}',
                 clientReferenceId: "#{user_id}"
             }).then(function (result) {
